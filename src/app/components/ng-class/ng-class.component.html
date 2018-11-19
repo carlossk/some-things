@@ -1,0 +1,11 @@
+<div [ngClass]="alert" class="alert ">
+  <strong>Well done!</strong> you successfully read this important alert message.
+</div>
+
+<button class="btn btn-primary" (click)="alert='alert-info'">info</button>
+
+<button class="btn btn-success" (click)="alert='alert-success'">success</button>
+
+<h3 [ngClass]="{'text-danger': proprietary.danger, 'text-info': !proprietary.danger    }">Hola mundo</h3>
+
+<button class="btn " [ngClass]="{'btn-danger': proprietary.danger,'btn-info':!proprietary.danger}" (click)="proprietary.danger= !proprietary.danger">Cambiar</button>
