@@ -6,13 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-class.component.css']
 })
 export class NgClassComponent implements OnInit {
-alert: String = 'alert-danger';
-proprietary: Object =  {
-  danger: false
-};
+  alert: String = 'alert-danger';
+  proprietary: Object = {
+    danger: false
+  };
+  loading: Boolean;
   constructor() { }
 
   ngOnInit() {
   }
-
+  ejecutar() {
+    this.loading = true;
+    setTimeout(() => this.loading = false, 3000);
+  }
 }

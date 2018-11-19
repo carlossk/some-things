@@ -1,11 +1,20 @@
 <div [ngClass]="alert" class="alert ">
-  <strong>Well done!</strong> you successfully read this important alert message.
+    <strong>Well done!</strong> you successfully read this important alert message.
 </div>
 
-<button class="btn btn-primary" (click)="alert='alert-info'">info</button>
+<button class="btn btn-primary  m-1" (click)="alert='alert-info'">info</button>
 
 <button class="btn btn-success" (click)="alert='alert-success'">success</button>
 
-<h3 [ngClass]="{'text-danger': proprietary.danger, 'text-info': !proprietary.danger    }">Hola mundo</h3>
+<h3 [ngClass]="{'text-danger': proprietary.danger, 'text-info': !proprietary.danger    }">Hello world!!</h3>
 
-<button class="btn " [ngClass]="{'btn-danger': proprietary.danger,'btn-info':!proprietary.danger}" (click)="proprietary.danger= !proprietary.danger">Cambiar</button>
+<button class="btn " [ngClass]="{'btn-danger': proprietary.danger,'btn-info':!proprietary.danger}" (click)="proprietary.danger= !proprietary.danger">change</button>
+<br><br><br>
+<h3>Process async</h3>
+<hr>
+<button [disabled]="loading" class="btn btn-primary mt-1" (click)="ejecutar()">
+
+  <i [ngClass]="{'fa-save': !loading, 'fa-sync-alt fa-spin': loading}" class="fa fa-save"></i>
+<span class="p-1" *ngIf="!loading">Save</span>
+<span class="p-1" *ngIf="loading">Wait please</span>
+</button>

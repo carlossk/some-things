@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { CssComponent } from './components/css/css.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { StandOutDirective } from './directives/stand-out.directive';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
     NgStyleComponent,
     CssComponent,
     NgClassComponent,
+    StandOutDirective,
   ],
   imports: [
     BrowserModule
